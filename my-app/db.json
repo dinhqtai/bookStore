@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "name": "sản phẩm 4",
+      "price": 1231,
+      "description": "mô tả",
+      "origin": "Thái Lan",
+      "id": 4
+    }
+  ]
+}
