@@ -4,9 +4,6 @@ import { Button, Checkbox, Form, Input, InputNumber, Select } from 'antd';
 import { IOrigin, IProduct } from '../page';
 import { addProducts } from '../api/project';
 const { TextArea } = Input;
-export interface IAppProps {
-}
-
 export default function AddProduct() {
     const onFinish = async (values: IProduct) => {
         await addProducts(values)
@@ -58,7 +55,7 @@ export default function AddProduct() {
                 <Select
                     defaultValue={"Xuất xứ"}
                     style={{ width: 200 }}
-                    options={Object.keys(IOrigin).map(key => ({ value: IOrigin[key], label: IOrigin[key] }))}>
+                    options={Object.keys(IOrigin).map(key => ({ value: key, label: key }))}>
                 </Select>
             </Form.Item>
             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
