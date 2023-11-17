@@ -1,0 +1,22 @@
+import express from "express";
+import RouterCategory from "./category.js";
+import RouterComment from "./comment.js";
+import routerAuth from "./auth.js";
+import RouterContact from "./contact.js";
+import RouterUser from "./user.js";
+import RouterAbout from "./about.js";
+import RouterHashTag from "./hashtag.js"; 
+import RouterProduct from "./product.js";
+import RouterBill from "./bill.js";
+const Router = express.Router();
+
+Router.use("/products", RouterProduct);
+Router.use("/categories", RouterCategory);
+Router.use("/comments", RouterComment);
+Router.use("/contacts", RouterContact);
+Router.use("/abouts", RouterAbout);
+Router.use("/auth", routerAuth);
+Router.use("/users", RouterUser);
+Router.use("/hashtags", RouterHashTag);
+Router.use("/bill", RouterBill);
+export default Router;
