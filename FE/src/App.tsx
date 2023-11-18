@@ -1,12 +1,12 @@
-import store from "./redux/store";
-import Router from "./routers";
-import { Provider } from 'react-redux';
-const App = () => {
-  return (
-    <Provider store={store}>
-       <Router />
-    </Provider>
-  );
+import { RouterProvider } from 'react-router-dom';
+import router from './routes';
+import { SearchProvider } from './context/SearchContext';
+function App() {
+   return (
+      <SearchProvider>
+         <RouterProvider router={router} />
+      </SearchProvider>
+   );
 }
 
 export default App;
